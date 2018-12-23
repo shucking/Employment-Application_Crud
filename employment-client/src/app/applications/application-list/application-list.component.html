@@ -1,0 +1,39 @@
+<div class="container-fluid">
+        <h2>Application Details</h2>
+        <table class="table table-striped">
+          <thead>
+          <tr>
+            <th>Id</th>
+            <th>Company Name</th>
+            <th>Position</th>
+            <th>Position Type</th>
+            <th>Status</th>
+            <th>Farthest Process</th>
+            <th>Date Applied</th>
+            <th>Date Response</th>
+            <th>Portal User</th>
+            <th>Portal Password</th>
+            <th>Source Application</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let application of applications">
+            <td>{{application.id}}</td>
+            <td>{{application.companyName}}</td>
+            <td>{{application.position}}</td>
+            <td>{{application.positionType}}</td>
+            <td>{{application.status}}</td>
+            <td>{{application.farthestProcess}}</td>
+            <td>{{application.dateApplied}}</td>
+            <td>{{application.dateResponse}}</td>
+            <td>{{application.portalUser}}</td>
+            <td>{{application.portalPass}}</td>
+            <td>{{application.sourceApplication}}</td>
+            <td>
+              <button class="btn btn-danger" (click)="delete(application)">Delete</button>
+              <button class="btn btn-danger" [routerLink]="['/application-edit', application.id]" style="margin-left: 20px;">Edit</button>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+</div>

@@ -1,0 +1,47 @@
+<div class="col-md-6 application-container">
+  <div class="card-body">
+    <form [formGroup]="editForm" (ngsubmit)="onSubmit()">
+      <div class="form-group">
+        <label class="col-md-4">Company Name</label>
+        <input type="text" class="form-control" formControlName="companyName" #companyName />
+      </div>
+      <div class="form-group">
+        <label class="col-md-4">Position</label>
+        <input type="text" class="form-control" formControlName="position" #position />
+      </div>
+      <div class="form-group">
+        <label class="col-md-4">Position Type (Intern, Co-Op, Job)</label>
+        <input type="text" class="form-control" formControlName="positionType" #positionType />
+      </div>
+      <div class="form-group">
+        <label class="col-md-4">Status (Pending, Reject, Accepted, Ghosted)</label>
+        <input type="text" class="form-control" formControlName="status" #status />
+      </div>
+      <div class="form-group">
+          <label class="col-md-4">Farthest Process</label>
+          <input type="text" class="form-control" formControlName="farthestProcess" #farthestProcess />
+      </div>
+      <div class="form-group">
+          <label class="col-md-4">Date Applied (YYYY-MM-DD)</label>
+          <input type="text" class="form-control" formControlName="dateApplied" #dateApplied />
+      </div>
+      <div class="form-group">
+          <label class="col-md-4">Date Response</label>
+          <input type="text" class="form-control" formControlName="dateResponse" #dateResponse />
+      </div>
+      <div class="form-group">
+          <label class="col-md-4">Portal Username</label>
+          <input type="text" class="form-control" formControlName="portalUser" #portalUser/>
+      </div>
+      <div class="form-group">
+          <label class="col-md-4">Portal Password</label>
+          <input type="text" class="form-control" formControlName="portalPass" #portalPass />
+      </div>
+      <div class="form-group">
+          <label class="col-md-4">Source Application</label>
+          <input type="text" class="form-control" formControlName="sourceApplication" #sourceApplication />
+      </div>
+      <button class="btn btn-success">Update</button>
+    </form>
+  </div>
+</div>

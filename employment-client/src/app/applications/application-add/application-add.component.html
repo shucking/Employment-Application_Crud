@@ -1,0 +1,83 @@
+<div class="card">
+    <div class="card-body">
+      <form [formGroup]="addForm">
+        <div class="row">
+          <div class = "col-md-6">
+              <div class="form-group">
+                  <label class="col-md-4">Company Name*</label>
+                  <input type="text" class="form-control" formControlName="companyName" #companyName />
+                </div>
+                <div *ngIf="addForm.controls['companyName'].invalid && (addForm.controls['companyName'].dirty || addForm.controls['companyName'].touched)" class="alert alert-danger">
+                  <div *ngIf="addForm.controls['companyName'].errors.required">
+                    Company name is required.
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-md-4">Position*</label>
+                  <input type="text" class="form-control" formControlName="position" #position />
+                </div>
+                <div *ngIf="addForm.controls['position'].invalid && (addForm.controls['position'].dirty || addForm.controls['position'].touched)" class="alert alert-danger">
+                  <div *ngIf="addForm.controls['position'].errors.required">
+                    Position is required.
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-md-4">Position Type (Intern, Co-Op, Job)*</label>
+                  <input type="text" class="form-control" formControlName="positionType" #positionType />
+                </div>
+                <div *ngIf="addForm.controls['positionType'].invalid && (addForm.controls['positionType'].dirty || addForm.controls['positionType'].touched)" class="alert alert-danger">
+                  <div *ngIf="addForm.controls['positionType'].errors.required">
+                    Position Type is required (Intern, Co-Op, Job).
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-md-4">Status (Pending, Reject, Accepted, Ghosted)*</label>
+                  <input type="text" class="form-control" formControlName="status" #status />
+                </div>
+                <div *ngIf="addForm.controls['status'].invalid && (addForm.controls['status'].dirty || addForm.controls['status'].touched)" class="alert alert-danger">
+                    <div *ngIf="addForm.controls['status'].errors.required">
+                      Status is required (Pending, Rejected, Accepted, Ghosted).
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-4">Farthest Process</label>
+                    <input type="text" class="form-control" formControlName="farthestProcess" #farthestProcess />
+                </div>
+          </div>
+          <div class="col-md-6">
+              <div class="form-group">
+                  <label class="col-md-4">Date Applied (YYYY-MM-DD)*</label>
+                  <input type="text" class="form-control" formControlName="dateApplied" #dateApplied />
+              </div>
+              <div *ngIf="addForm.controls['dateApplied'].invalid && (addForm.controls['dateApplied'].dirty || addForm.controls['dateApplied'].touched)" class="alert alert-danger">
+                  <div *ngIf="addForm.controls['dateApplied'].errors.required">
+                   Date Applied (YYYY-MM-DD) is required.
+                  </div>
+              </div>
+              <div class="form-group">
+                  <label class="col-md-4">Date Response</label>
+                  <input type="text" class="form-control" formControlName="dateResponse" #dateResponse />
+              </div>
+              <div class="form-group">
+                  <label class="col-md-4">Portal Username</label>
+                  <input type="text" class="form-control" formControlName="portalUser" #portalUser/>
+              </div>
+              <div class="form-group">
+                  <label class="col-md-4">Portal Password</label>
+                  <input type="text" class="form-control" formControlName="portalPass" #portalPass />
+              </div>
+              <div class="form-group">
+                  <label class="col-md-4">Source Application*</label>
+                  <input type="text" class="form-control" formControlName="sourceApplication" #sourceApplication />
+              </div>
+              <div *ngIf="addForm.controls['sourceApplication'].invalid && (addForm.controls['sourceApplication'].dirty || addForm.controls['sourceApplication'].touched)" class="alert alert-danger">
+                  <div *ngIf="addForm.controls['sourceApplication'].errors.required">
+                    Source Application is required.
+                  </div>
+              </div>
+          </div>
+        </div>
+        <button class="btn btn-success" (click) = "onSubmit()">Save</button>
+      </form>
+    </div>
+</div>
