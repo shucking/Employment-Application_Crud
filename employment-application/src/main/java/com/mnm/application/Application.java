@@ -40,32 +40,6 @@ public class Application {
 	@Column(name = "job_board")
 	private String sourceApplication;
 	
-//	public Application() {
-//		
-//	}
-//	
-//	public Application(int id) {
-//		this.id = id;
-//	}
-//	
-//	public Application(int id, String companyName, String position, String positionType, String status, String farthestProcess, String dateApplied, String dateResponse, String portalUser, String portalPass, String sourceApplication) {
-//		this(companyName, position, positionType, status, sourceApplication, dateApplied, dateResponse, portalUser, portalPass, sourceApplication);
-//		this.id = id;
-//	}
-//	
-//	public Application(String companyName, String position, String positionType, String status, String farthestProcess, String dateApplied, String dateResponse, String portalUser, String portalPass, String sourceApplication) {
-//		this.companyName = companyName;
-//		this.position = position;
-//		this.positionType = positionType;
-//		this.status = status;
-//		this.farthestProcess = farthestProcess;
-//		this.dateApplied = dateApplied;
-//		this.dateResponse = dateResponse;
-//		this.portalUser = portalUser;
-//		this.portalPass = portalPass;
-//		this.sourceApplication = sourceApplication;
-//	}
-	
 	public int getId() {
 		return id;
 	}
