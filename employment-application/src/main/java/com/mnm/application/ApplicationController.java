@@ -27,7 +27,7 @@ public class ApplicationController {
 		applicationService.save(application);
 	}
 	
-	@RequestMapping(value = "/application/update", method = RequestMethod.PUT)
+	@RequestMapping(value = "/applications/update", method = RequestMethod.PUT)
 	public void update(@RequestBody Application application) {
 		applicationService.update(application);
 	}
