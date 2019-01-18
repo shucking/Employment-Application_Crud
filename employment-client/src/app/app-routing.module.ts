@@ -9,7 +9,7 @@ const routes: Routes = [
   { path: "", redirectTo: "/applications", pathMatch: "full"},
   { path: "applications", component: ApplicationListComponent},
   { path: "applications-add", component: ApplicationAddComponent},
-  { path: "applications-edit/:id", component: ApplicationEditComponent}
+  { path: "applications-edit", component: ApplicationEditComponent}
 ];
 
 @NgModule({
