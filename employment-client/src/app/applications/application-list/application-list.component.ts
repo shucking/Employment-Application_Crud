@@ -29,12 +29,11 @@ export class ApplicationListComponent implements OnInit {
       });
   };
 
-  // editAppId(application: Application): void {
-  //   console.log("in edit epplication")
-  //   window.localStorage.removeItem("editAppId");
-  //   window.localStorage.setItem("editAppId", application.id.toString());
-  //   this.router.navigate(['application-edit', application.id]);
-  // };
+  edit(application: Application): void {
+    localStorage.removeItem("editApp");
+    localStorage.setItem("editApp", application.id.toString());
+    this.router.navigate(['applications-edit']);
+  }
 
   add(): void {
     console.log("in add application")
