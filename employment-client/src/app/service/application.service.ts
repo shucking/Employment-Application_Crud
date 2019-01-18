@@ -35,13 +35,14 @@ export class ApplicationService {
   getApplication (id: number): Observable<Application> {
     const url = `${baseUrl}/${id}`;
     return this.http.get<Application>(url).pipe(
-      tap(_ => console.log(`fetched application id = ${id}`))
+      tap(_ => console.log(`fetched application id = ${id}`)),
+      catchError(this.handleError<Application>(`getApplication id = ${id}`))
     );
   }
 
   update(application): Observable<any> {
     const url = `${baseUrl}/update`;
-    return this.http.put(url, application, httpOptions).pipe(
+    return this.http.put<Application>(url, application, httpOptions).pipe(
       tap(_=> console.log(`updated application id = ${application.id}`)),
       catchError(this.handleError<any>('update'))
     );
