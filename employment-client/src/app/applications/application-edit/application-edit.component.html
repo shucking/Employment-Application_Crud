@@ -1,6 +1,6 @@
 <div class="col-md-6 application-container">
   <div class="card-body">
-    <form [formGroup]="editForm" (ngsubmit)="onSubmit()">
+    <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
       <div class="form-group">
         <label class="col-md-4">Company Name</label>
         <input type="text" class="form-control" formControlName="companyName" #companyName />
