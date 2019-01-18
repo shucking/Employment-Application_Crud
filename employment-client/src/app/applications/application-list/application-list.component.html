@@ -30,8 +30,8 @@
             <td>{{application.portalPass}}</td>
             <td>{{application.sourceApplication}}</td>
             <td>
+              <button class="btn btn-danger" (click)="edit(application)">Edit</button>
               <button class="btn btn-danger" (click)="delete(application)">Delete</button>
-              <button class="btn btn-danger" [routerLink]="['/application-edit', application.id]" style="margin-left: 20px;">Edit</button>
             </td>
           </tr>
           </tbody>
